@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://pogobanned.serv00.net/api';
+export const API_BASE_URL = 'https://pogobanned.serv00.net/api';
