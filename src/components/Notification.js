@@ -1,9 +1,13 @@
 // src/components/Notification.js
-import { message } from 'antd';
+import { notification } from 'antd';
 
-const Notification = (type, response, defaultContent) => {
-    const content = response?.data?.message || defaultContent;
-    message[type](content);
+const Notification = (type, message, description) => {
+    notification[type]({
+        message: message,
+        description: description,
+        placement: 'topRight',  // Anda bisa mengatur posisi notifikasi
+        duration: 4.5           // Durasi dalam detik sebelum notifikasi menghilang, set '0' untuk durasi tanpa batas
+    });
 };
 
 export default Notification;
